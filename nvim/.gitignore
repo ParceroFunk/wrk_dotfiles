@@ -1,0 +1,7 @@
+# Lazy lockfile is good to keep — pins plugin versions across machines
+# lazy-lock.json   <- DO track this for reproducible installs
+
+# Ignore generated/cache
+/spell/
+/sessions/
+*.log
