@@ -29,6 +29,16 @@ return {
 			{ "<leader>fg", "<cmd>Telescope live_grep<cr>",  desc = "Grep" },
 			{ "<leader>fb", "<cmd>Telescope buffers<cr>",    desc = "Buffers" },
 		},
+		opts = {
+			defaults = {
+				preview = {
+					-- disable treesitter-based preview highlighting: telescope's
+					-- previewer calls nvim-treesitter's ft_to_lang(), which doesn't
+					-- exist since tree-sitter-manager.nvim replaced nvim-treesitter
+					treesitter = false,
+				},
+			},
+		},
 	},
 
 	-- Syntax highlighting — replaces nvim-treesitter for Neovim 0.12+
